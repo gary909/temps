@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <script>
+        function showTemps() {
+            var tempByHour = [59.2, 60.01, 63, 65, 62];
+
+            for (var i = 0; i < tempByHour.length; i++) {
+                var theTemp = tempByHour[i]
+                var id = "temp" + i;
+                var li = document.getElementById(id);
+                if (i == 0) {
+                    li.innerHTML = "The temperature at noon was " + theTemp;
+                } else {
+                    li.innerHTML = "The temperature at " + i + " was " + theTemp;
+                }
+            }
+        }
+        window.onload = showTemps;
+    </script>
+    <title>Temps</title>
+</head>
+
+<body>
+    <h1>Temperature</h1>
+    <ul>
+        <li id="temp0"></li>
+        <li id="temp1"></li>
+        <li id="temp2"></li>
+        <li id="temp3"></li>
+        <li id="temp4"></li>
+    </ul>
+    <div class="box"></div>
+</body>
+
+</html>
